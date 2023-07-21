@@ -7,7 +7,40 @@
 	"item": [
 		{
 			"name": "New Request",
-			"_postman_id": "489f6602-e1da-4b4d-b80b-b6bd9581689b",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bd93c85b-eccb-456f-bba7-19ca2e27ef61",
+						"exec": [
+							"// Step 1: Print the Response Code & Response Status",
+							"console.clear();",
+							"console.log('Response Code:', pm.response.code);",
+							"// Step 2: Parse the response received from the URL",
+							"let responseBody1 = pm.response.json();",
+							"",
+							"let users = responseBody1.data; ",
+							"// Assuming users is an array of user objects",
+							"if (users?.length) {",
+							"  for (let i = 0; i < users.length; i++) {",
+							"    const user = users[i];",
+							"    const username = user.username;",
+							"    const submissionCount = user['submission_count'];",
+							"",
+							"    // Step 4: Print the extracted username and submission count for each username on the screen",
+							"    console.log('Username:', username);",
+							"    console.log('Submission Count:', submissionCount);",
+							"  }",
+							"} else {",
+							"  console.log('No user data found in the response.');",
+							"}",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "489f6602-e1da-4b4d-b80b-b6bd9581689b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
