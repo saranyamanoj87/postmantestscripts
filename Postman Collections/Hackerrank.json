@@ -15,7 +15,6 @@
 						"exec": [
 							"// Step 1: Print the Response Code & Response Status",
 							"console.clear();",
-							"console.clear();",
 							"console.log('Response Code:', pm.response.code);",
 							"// Step 2: Parse the response received from the URL",
 							"let responseBody1 = pm.response.json();",
