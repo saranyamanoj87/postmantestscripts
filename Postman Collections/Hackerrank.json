@@ -1,0 +1,22 @@
+{
+	"info": {
+		"_postman_id": "0fcd96c3-38df-445b-8d9a-91c21b70722f",
+		"name": "Hackerank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"_postman_id": "489f6602-e1da-4b4d-b80b-b6bd9581689b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://jsonmock.hackerrank.com/api/article_users"
+			},
+			"response": []
+		}
+	]
+}
